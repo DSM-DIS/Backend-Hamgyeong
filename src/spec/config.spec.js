@@ -7,13 +7,4 @@ describe('Config test', () => {
             assert.strictEqual(configs.SERVER_PORT, 8080);
         });  
     });
-
-    describe('live environment', () => {
-        before(() => {
-            process.env.NODE_ENV = 'live';
-        });
-        it('SERVER_PORT', () => {
-            assert.ok(true);
-        });
-    });
 });

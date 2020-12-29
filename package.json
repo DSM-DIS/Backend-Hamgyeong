@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/spec",
+    "test": "cross-env NODE_ENV=dev mocha src/spec",
     "start": "node src/index.js"
   },
   "repository": {
