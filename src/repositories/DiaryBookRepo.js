@@ -8,10 +8,11 @@ const axios = Axios.create({
 
 
 class DiaryBookReop {
-    static async create(leader, name) {
+    static async create(maker, name) {
+        console.log(maker, name);
         return await axios.post('/diary-book', {
-            leader: leader,
-            diary_name: name
+            maker: maker,
+            name: name
         });
     }
 }
