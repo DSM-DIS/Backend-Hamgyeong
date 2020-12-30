@@ -2,7 +2,7 @@ const Axios = require('axios');
 
 
 const axios = Axios.create({
-    baseURL: 'http://jeonju:8080/',
+    baseURL: 'http://jeonju:8080/repositories/',
     timeout: 1000,
 });
 
