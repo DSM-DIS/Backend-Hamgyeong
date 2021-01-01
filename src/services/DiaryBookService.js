@@ -6,7 +6,16 @@ class DiaryBookService {
     }
 
     async makeNewDiaryBook(user_id, name) {
-        await this.diary_book_repo.create(user_id, name);
+        const res = await this.diary_book_repo.create(user_id, name);
+        const axios = Axios.create({
+            baseURL: 'http://gyeongsang:8893/repositories/',
+            timeout: 1000,
+        });
+        
+        await axios.post('/diary-book', {
+            userId: user_id,
+            code: res.data.invite_code
+        });
     }
 }
 
