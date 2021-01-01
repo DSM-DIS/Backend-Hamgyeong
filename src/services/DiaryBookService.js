@@ -1,4 +1,4 @@
-
+const Axios = require('axios');
 
 class DiaryBookService {
     constructor(diary_book_repo) {
