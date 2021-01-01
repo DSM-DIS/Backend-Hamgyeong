@@ -16,6 +16,7 @@ class DiaryBookService {
             userId: user_id,
             code: res.data.invite_code
         });
+        return res.data.invite_code;
     }
 }
 
