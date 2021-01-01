@@ -9,8 +9,10 @@ route.post('/diary-book', async (req, res) => {
     const user = req.get('userId');
     const diary_name = req.body.name;
 
-    await diary_book_service.makeNewDiaryBook(user, diary_name);
-    res.send('');
+    const code = await diary_book_service.makeNewDiaryBook(user, diary_name);
+    res.send({
+        inviteCode: code
+    });
 });
 
 
